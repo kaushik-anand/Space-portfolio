@@ -63,10 +63,6 @@
 .scrollbar-hidden::-webkit-scrollbar {
   display: none;
 }
-.certificate-card {
-  width: 500px; /* Set the desired width */
-  height: 425px; /* Set the desired height */
-}
 /*  */
 .experience-card {
   width: 400px; /* Set the desired width */

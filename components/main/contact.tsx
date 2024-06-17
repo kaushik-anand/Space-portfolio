@@ -71,6 +71,9 @@ const Contact: React.FC = () => {
 
   return (
     <div className='mt-24'>
+      <h1 className="flex flex-col items-center text-[40px] font-semibold text-transparent bg-clip-text bg-gradient-to-r from-purple-500 to-cyan-500 py-20">
+        Let Us Work Together.
+      </h1>
     <form className="w-1/2 bg-transparent border-2 border-gray-300 rounded-lg p-8 mx-auto relative z-30 opacity-100 ">
       <h2 className="text-2xl font-bold mb-5" style={{ color: "violet" }}>GET IN TOUCH.</h2>
       <div className="mb-8" id="contact">
@@ -114,7 +117,7 @@ const Contact: React.FC = () => {
         <p className="text-violet mt-4">Message Sent, Will get back to you at the earliest.</p>
       )}
       <div className="flex justify-center mt-4 z-30">
-        <a href="/Kaushik_Anand_resume.pdf" download className="text-white px-4 py-2 bg-black-500 hover:bg-violet-400 rounded-md border border-[#7042f88b]">
+        <a href="/Kaushik_Anand_resume__.pdf" download className="text-white px-4 py-2 bg-black-500 hover:bg-violet-400 rounded-md border border-[#7042f88b]">
           Download CV
         </a>
 

@@ -29,15 +29,10 @@ export const Skill_data = [
       width: 80,
       height: 80,
     },
-    // {
-    //   skill_name: "Redux",
-    //   Image: "/redux.png",
-    //   width: 80,
-    //   height: 80,
-    // },
+   
     {
       skill_name: "React Query",
-      Image: "/reactquery.png",
+      Image: "/angular.png",
       width: 80,
       height: 80,
     },
@@ -59,12 +54,7 @@ export const Skill_data = [
       width: 80,
       height: 80,
     },
-    {
-      skill_name: "Stripe Payment",
-      Image: "/stripe.webp",
-      width: 80,
-      height: 80,
-    },
+
     {
       skill_name: "Node js",
       Image: "/node-js.png",
@@ -80,22 +70,7 @@ export const Skill_data = [
   
   ];
   
-  export const Socials = [
-    {
-      name: "Github",
-      src: "/github2.png",
-      URL:"https://github.com/kaushik-anand",
-    },
-    {
-      name: "Linkdin",
-      src: "/LinkedIn.png",
-      URL:"https://www.linkedin.com/in/kaushik-anand1724/",
-    },
-    // {
-    //   name: "Instagram",
-    //   src: "/discord.svg",
-    // },
-  ];
+ 
   
   
   
@@ -124,30 +99,15 @@ export const Skill_data = [
       width: 80,
       height: 80,
     },
-    {
-      skill_name: "Material UI",
-      Image: "/mui.png",
-      width: 80,
-      height: 80,
-    },
+
     {
       skill_name: "React",
       Image: "/react.png",
       width: 80,
       height: 80,
     },
-    // {
-    //   skill_name: "Redux",
-    //   Image: "/redux.png",
-    //   width: 80,
-    //   height: 80,
-    // },
-    {
-      skill_name: "React Query",
-      Image: "/reactquery.png",
-      width: 80,
-      height: 80,
-    },
+    
+   
     {
       skill_name: "Type Script",
       Image: "/ts.png",
@@ -181,36 +141,15 @@ export const Skill_data = [
       width: 40,
       height: 40,
     },
-    {
-      skill_name: "Fire base",
-      Image: "/Firebase.png",
-      width: 55,
-      height: 55,
-    },
-    // {
-    //   skill_name: "Postger SQL",
-    //   Image: "/postger.png",
-    //   width: 70,
-    //   height: 70,
-    // },
+   
     {
       skill_name: "My SQL",
       Image: "/mysql.png",
       width: 70,
       height: 70,
     },
-    // {
-    //   skill_name: "Prisma",
-    //   Image: "/prisma.webp",
-    //   width: 70,
-    //   height: 70,
-    // },
-    {
-      skill_name: "Graphql",
-      Image: "/graphql.png",
-      width: 80,
-      height: 80,
-    },
+   
+
   ];
   
   export const Full_stack = [
@@ -220,18 +159,8 @@ export const Skill_data = [
       width: 70,
       height: 70,
     },
-    // {
-    //   skill_name: "Tauri",
-    //   Image: "/tauri.svg",
-    //   width: 70,
-    //   height: 70,
-    //},
-    {
-      skill_name: "Docker",
-      Image: "/docker.webp",
-      width: 70,
-      height: 70,
-    },
+   
+
   
     {
       skill_name: "Figma",
@@ -251,6 +180,19 @@ export const Skill_data = [
       width: 60,
       height: 60,
     },
+  ];
+  export const Socials = [
+    {
+      name: "Github",
+      src: "/github2.png",
+      URL:"https://github.com/kaushik-anand",
+    },
+    {
+      name: "Linkdin",
+      src: "/LinkedIn.png",
+      URL:"https://www.linkedin.com/in/kaushik-anand1724/",
+    },
+    
   ];
   
   
