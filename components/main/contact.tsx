@@ -70,13 +70,13 @@ const Contact: React.FC = () => {
   };
 
   return (
-    <div className='mt-24'>
+    <div className='mt-24' id="contact">
       <h1 className="flex flex-col items-center text-[40px] font-semibold text-transparent bg-clip-text bg-gradient-to-r from-purple-500 to-cyan-500 py-20">
         Let Us Work Together.
       </h1>
     <form className="w-1/2 bg-transparent border-2 border-gray-300 rounded-lg p-8 mx-auto relative z-30 opacity-100 ">
-      <h2 className="text-2xl font-bold mb-5" style={{ color: "violet" }}>GET IN TOUCH.</h2>
-      <div className="mb-8" id="contact">
+      <h2 className="text-2xl font-bold mb-5" style={{ color: "violet" }}>GET IN TOUCH 😀</h2>
+      <div className="mb-8" >
         <input
           type="text"
           placeholder="Your name"
