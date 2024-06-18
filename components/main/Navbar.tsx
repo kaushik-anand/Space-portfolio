@@ -42,7 +42,7 @@ const Navbar = () => {
               Projects
             </a>
             <a href="#contact" className="cursor-pointer">
-             Contact Me
+             Contact Me 📞
             </a>
           </div>
         </div>

@@ -46,7 +46,7 @@ const HeroContent = () => {
           variants={slideInFromLeft(0.8)}
           className="text-lg text-gray-400 my-5 max-w-[600px]"
         >
-          I&apos;m Experienced in Java, JavaScript, and C++, with strong proficiency in programming, software development, and a solid understanding of algorithms, data structures, and web development. Passionate about technology and collaboration, eager to contribute to innovative solutions and real-world projects in software development.
+          I&apos;m Experienced in Java, JavaScript, C++, and proficient in machine learning, React, and Angular. I possess a strong foundation in programming, software development, and knowledge of algorithms and data structures. Passionate about technology and collaboration, I am committed to driving innovation and delivering impactful solutions in software development.
         </motion.p>
         <motion.a
           variants={slideInFromLeft(1)}

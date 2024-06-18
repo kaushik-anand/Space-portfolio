@@ -37,7 +37,7 @@ const Projects = () => {
             <ProjectCard
               src="/gitgoogle.png"
               title="GitGoogle"
-              description="Ditch complex GitHub navigation! GitGoogle offers user-friendly exploration, insights & keeps you updated on coding trends."
+              description="GitGoogle makes GitHub navigation easy, with user-friendly design and detailed insights. Explore profiles and repositories effortlessly."
             />
             <button className="mt-8 text-white font-bold py-[8px] px-[7px]  bg-black-500 border border-[#7042f88b] opacity-[1] rounded  hover:bg-violet-400">
               Explore!

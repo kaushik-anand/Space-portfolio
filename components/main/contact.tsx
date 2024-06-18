@@ -114,7 +114,7 @@ const Contact: React.FC = () => {
           {loading ? 'Sending...' : 'Send'}
         </button>
         {messageSent && (
-        <p className="text-violet mt-4">Message Sent, Will get back to you at the earliest.</p>
+        <p className="text-violet mt-4">Message Sent, Will get back to you at the earliest 😊.</p>
       )}
       <div className="flex justify-center mt-4 z-30">
         <a href="/Kaushik_Anand_resume__.pdf" download className="text-white px-4 py-2 bg-black-500 hover:bg-violet-400 rounded-md border border-[#7042f88b]">
