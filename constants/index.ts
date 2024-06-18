@@ -1,4 +1,6 @@
-export const Skill_data = [
+import { Skill } from "../components/main/types";
+
+export const Skill_data: Skill[] = [
     {
       skill_name: "Html 5",
       Image: "/html.png",
@@ -69,7 +71,7 @@ export const Skill_data = [
   
   
   
-  export const Frontend_skill = [
+  export const Frontend_skill: Skill[] = [
     {
       skill_name: "c",
       Image: "/c.png",
@@ -153,7 +155,7 @@ export const Skill_data = [
 
   ];
   
-  export const Full_stack = [
+  export const Full_stack: Skill[] = [
     // {
     //   skill_name: "React Native",
     //   Image: "/react.png",
@@ -175,7 +177,7 @@ export const Skill_data = [
   
   
   
-  export const Other_skill = [
+  export const Other_skill: Skill[] = [
    
   ];
   export const Socials = [
