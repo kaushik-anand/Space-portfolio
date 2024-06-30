@@ -1,17 +1,8 @@
-// Import necessary modules and types
 "use client";
 import React, { useRef, useState, FormEvent, ChangeEvent } from 'react';
-import { motion } from 'framer-motion';
 import emailjs from '@emailjs/browser';
 
-import { styles } from '../sub/style';
-// import { EarthCanvas } from './canvas';
-import SectionWrapper from '../sub/hoc/SectionWrapper';
-import  Variants, { slideIn }  from '../sub/utils/motion';
-
-// Define the Contact component
 const Contact: React.FC = () => {
-  // Define refs and state
   const formRef = useRef<HTMLFormElement>(null);
   const [form, setForm] = useState({
     name: '',
@@ -19,9 +10,9 @@ const Contact: React.FC = () => {
     message: '',
   });
   const [loading, setLoading] = useState(false);
-  const [messageSent, setMessageSent] = useState(false); // State to track if the message was sent successfully
+  const [messageSent, setMessageSent] = useState(false);
+  const [error, setError] = useState('');
 
-  // Handle form input change
   const handleChange = (e: ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
     const { name, value } = e.target;
     setForm({
@@ -30,12 +21,18 @@ const Contact: React.FC = () => {
     });
   };
 
-  // Handle form submission
   const handleSubmit = (e: FormEvent) => {
     e.preventDefault();
     setLoading(true);
+    setError('');
 
-    // Send email using emailjs
+    // Form validation
+    if (!form.name || !form.email || !form.message) {
+      setLoading(false);
+      setError('All fields are required 🤨.');
+      return;
+    }
+
     emailjs
       .send(
         'service_ayae2bd',
@@ -51,9 +48,8 @@ const Contact: React.FC = () => {
       )
       .then(
         () => {
-          // Reset form and loading state
           setLoading(false);
-          setMessageSent(true); // Set messageSent state to true
+          setMessageSent(true);
           setForm({
             name: '',
             email: '',
@@ -61,7 +57,6 @@ const Contact: React.FC = () => {
           });
         },
         (error) => {
-          // Log error and show alert
           setLoading(false);
           console.error(error);
           alert('Ahh, something went wrong. Please try again.');
@@ -71,63 +66,59 @@ const Contact: React.FC = () => {
 
   return (
     <div className='mt-24' id="contact">
-      <h1 className="flex flex-col items-center text-[40px] font-semibold text-transparent bg-clip-text bg-gradient-to-r from-purple-500 to-cyan-500 py-20">
+      <h1 className="flex flex-col items-center text-4xl md:text-6xl font-semibold text-transparent bg-clip-text bg-gradient-to-r from-purple-500 to-cyan-500 py-8 md:py-16">
         Let Us Work Together.
       </h1>
-    <form className="w-1/2 bg-transparent border-2 border-gray-300 rounded-lg p-8 mx-auto relative z-30 opacity-100 ">
-      <h2 className="text-2xl font-bold mb-5" style={{ color: "violet" }}>GET IN TOUCH 😀</h2>
-      <div className="mb-8" >
-        <input
-          type="text"
-          placeholder="Your name"
-          name="name"
-          value={form.name}
-          onChange={handleChange}
-          className="w-full px-3 py-4 text-lg placeholder-gray-400 bg-transparent border border-gray-300 rounded shadow text-white"
-        />
-      </div>
-        <div className="mb-8">
+      <form className="w-full max-w-lg bg-transparent border-2 border-[#2A0E61] rounded-lg p-8 mx-auto relative z-30 opacity-100 md:max-w-2xl" onSubmit={handleSubmit}>
+        <h2 className="text-lg md:text-2xl font-bold mb-5" style={{ color: "violet" }}>GET IN TOUCH 😀</h2>
+        {error && <p className="text-red-500 mb-4">{error}</p>}
+        <div className="mb-4 md:mb-8 ">
+          <input
+            type="text"
+            placeholder="Your name"
+            name="name"
+            value={form.name}
+            onChange={handleChange}
+            className="w-full px-3 py-2 md:py-3 text-base md:text-lg placeholder-gray-400 bg-transparent border border-[#2A0E61] rounded shadow text-white"
+          />
+        </div>
+        <div className="mb-4 md:mb-8">
           <input
             type="email"
             placeholder="Email"
             name="email"
             value={form.email}
             onChange={handleChange}
-            className="w-full px-3 py-4 text-lg placeholder-gray-400 bg-transparent border border-gray-300 rounded shadow text-white"
+            className="w-full px-3 py-2 md:py-3 text-base md:text-lg placeholder-gray-400 bg-transparent border border-[#2A0E61] rounded shadow text-white"
           />
         </div>
-        <div className="mb-8">
-          <input
-            type="text"
+        <div className="mb-6 md:mb-8">
+          <textarea
             placeholder="Your Message"
             name="message"
             value={form.message}
             onChange={handleChange}
-            className="w-full px-3 py-12 text-lg placeholder-gray-400 bg-transparent border border-gray-300 rounded shadow text-white"
+            rows={5}
+            className="w-full px-3 py-2 md:py-3 text-base md:text-lg placeholder-gray-400 bg-transparent border border-[#2A0E61] rounded shadow text-white"
           />
-          
         </div>
         <button
-          onClick={handleSubmit} // Handle form submission on button click
-          className="px-6 py-3 text-lg font-bold text-white  duration-150 ease-linear bg-black-500 hover:bg-violet-400 border border-[#7042f88b]"
+          type="submit"
+          className="w-full px-6 py-3 text-base md:text-lg font-bold text-white bg-black-500 hover:bg-violet-400 border border-[#7042f88b] rounded-md"
         >
           {loading ? 'Sending...' : 'Send'}
         </button>
         {messageSent && (
-        <p className="text-violet mt-4">Message Sent, Will get back to you at the earliest 😊.</p>
-      )}
-      <div className="flex justify-center mt-4 z-30">
-        <a href="/Kaushik_Anand_resume__.pdf" download className="text-white px-4 py-2 bg-black-500 hover:bg-violet-400 rounded-md border border-[#7042f88b]">
-          Download CV
-        </a>
-
-      </div>
+          <p className="text-violet mt-4">Message Sent, Will get back to you at the earliest 😊.</p>
+        )}
+        <div className="flex justify-center mt-4 z-30">
+          <a href="/Kaushik_Anand_Resume.pdf" download className="text-white px-4 py-2 bg-black-500 hover:bg-violet-400 rounded-md border border-[#7042f88b]">
+            Download CV
+          </a>
+        </div>
       </form>
-
-     
     </div>
   );
 };
 
-// Export the Contact component wrapped in SectionWrapper
 export default Contact;

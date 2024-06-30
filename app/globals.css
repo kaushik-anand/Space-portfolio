@@ -63,11 +63,7 @@
 .scrollbar-hidden::-webkit-scrollbar {
   display: none;
 }
-/*  */
-.experience-card {
-  width: 400px; /* Set the desired width */
-  height: 400px; /* Set the desired height */
-}
+
 .text-violet {
   color: violet;
 }
